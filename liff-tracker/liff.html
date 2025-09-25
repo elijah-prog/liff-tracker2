@@ -7,7 +7,7 @@
   <p>Redirecting to LINE chat...</p>
   <script>
     async function main() {
-      await liff.init({ liffId: "YOUR_LIFF_ID" });
+      await liff.init({ liffId: "LIFF_ID" });
       const context = liff.getContext();
       const userId = context.userId;
       const utm = new URLSearchParams(window.location.search).get("utm") || "unknown";
@@ -18,7 +18,7 @@
         body: JSON.stringify({ userId, utm })
       });
 
-      window.location.href = "line://ti/p/@YOUR_OA_ID";
+      window.location.href = "line://ti/p/@OA_ID";
     }
     main();
   </script>
